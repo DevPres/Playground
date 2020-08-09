@@ -1,0 +1,132 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  height: 100px;
+  background-color: #31393c;
+  text-align: center;
+  padding:30px;
+  color:#fdca40;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.app {
+  height:100vh;
+  background-color: #a5b8cb;
+  display: flex;
+}
+
+.calculator {
+  grid-template-columns: [line-start] 2fr [line-2] 2fr  [line-3] 2fr  [line-4] 1fr [line-end];
+  grid-template-rows: [start-display] 200px [start-keyboard] auto [keyboard-end] ;
+  display: grid;
+  height: 500px;
+  width: 350px;
+  margin:auto;
+  border-radius: 50px;
+  background: #d4dee8;
+  box-shadow:  5px 10px 30px #b4bdc5, -5px 10px 100px #f4ffff;
+}
+
+.display {
+  grid-area: start-display / line-start / start-keyboard / line-end ;
+  padding:20px;
+}
+
+.display-box {
+  background-color: white;
+  height: 100%;
+  padding: 25px;
+  -webkit-box-shadow: inset 0px 0px 42px -26px rgba(0,0,0,1);
+  -moz-box-shadow: inset 0px 0px 42px -26px rgba(0,0,0,1);
+  box-shadow: inset 0px 0px 42px -26px rgba(0,0,0,1);
+  border-radius:5%;
+  -webkit-border-radius:5%;
+  -moz-border-radius:5%;
+  -ms-border-radius:5%;
+  -o-border-radius:5%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:   
+  "logo this_op this_op" 
+  "logo result result"  ;
+}
+
+#result, #this_op {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+}
+
+#result {
+  grid-area:result;
+}
+
+#this_op {
+  grid-area:this_op;
+}
+
+.keyboard-wrap{
+  grid-area: start-keyboard / line-start / keyboard-end / line-end ;
+  padding: 20px;
+  row-gap: 10px;
+  column-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+ 
+}
+
+
+/* #hide_view {
+  display: none;
+}
+ */
+
+
+
+
+.btn {
+  justify-self: center;
+  width:100%;
+  margin:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-origin: none;
+  text-decoration:none;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #b1c5d9, #95a6b7);
+  box-shadow:  20px 20px 60px #8c9cad,-20px -20px 60px #bed4e9;
+ 
+}
+
+
+.btn > span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+}
+
+.btn:focus {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #95a6b7, #b1c5d9);
+  box-shadow:  20px 20px 60px #8c9cad, -20px -20px 60px #bed4e9;
+}
