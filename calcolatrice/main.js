@@ -17,7 +17,7 @@ window.addEventListener("load", (event) => {
   buttons.forEach(element => element.addEventListener("click", (e)=>{
     digit(e);
   }))
-
+//
   /* Alternative */
   /* for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("load", digit())
