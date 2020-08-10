@@ -6,6 +6,7 @@
 
 body {
   height: 100vh;
+  font: verdana;
 }
 
 header {
@@ -60,8 +61,8 @@ header h1 {
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:   
-  "logo this_op this_op" 
-  "logo result result"  ;
+  "this_op this_op this_op" 
+  "result result result"  ;
 }
 
 #result, #this_op {
@@ -76,7 +77,14 @@ header h1 {
 
 #this_op {
   grid-area:this_op;
+  height: 35px;
+  font-size: 0.9rem;
+  color: grey;
+  display: block;
+  scrollbar-color: #a5b8cb transparent;
+  scrollbar-width: thin;
 }
+
 
 .keyboard-wrap{
   grid-area: start-keyboard / line-start / keyboard-end / line-end ;
