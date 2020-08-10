@@ -1,7 +1,4 @@
 
-/* Per la prossima volta! rcrea una funzione di reset che ti riporti la calcolatrice allo stato iniziale, poi aggiungi le modifiche caso per caso. cerca di accorciare il codice,  */
-
-
 window.addEventListener("load", (event) => {
 
   const buttons=document.querySelectorAll(".btn");
